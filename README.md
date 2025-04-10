@@ -1,13 +1,13 @@
-            func InitMongodb() (err error) {
-            // 1.连接mongodb
-            client, err = mongo.Connect(context.Background(),
-            options.Client().ApplyURI("mongodb://mongodb:").
-            SetConnectTimeout(5*time.Second))
-            if err != nil {
-            fmt.Println(err)
-            return err
-            }
-            
+_mongodb一些使用实例_
+
+                func InitMongodb() (err error) {
+                client, err = mongo.Connect(context.Background(),
+                options.Client().ApplyURI("mongodb://mongodb:").
+                SetConnectTimeout(5*time.Second))
+                if err != nil {
+                fmt.Println(err)
+                return err
+                }
                 if err = client.Ping(context.Background(), nil); err != nil {
                     fmt.Println(err)
                     return err
