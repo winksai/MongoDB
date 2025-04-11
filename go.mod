@@ -1,4 +1,4 @@
-module github.com/winksai/MongoDB
+module github.com/winksai/mongodb
 
 go 1.23.6
 
